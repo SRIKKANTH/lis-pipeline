@@ -490,7 +490,7 @@ function prepare_perf_rhel (){
         cp -fr ./tools "${base_dir}/perf/rpmbuild/SOURCES"
         cp -fr ./include "${base_dir}/perf/rpmbuild/SOURCES"
         mkdir "${base_dir}/perf/rpmbuild/SOURCES/scripts"
-        cp -fr ./scripts/bpf_helpers_doc.py "${base_dir}/perf/rpmbuild/SOURCES/scripts"
+        cp -fr ./scripts/bpf_doc.py "${base_dir}/perf/rpmbuild/SOURCES/scripts"
     fi
     popd
     pushd "${base_dir}/perf/rpmbuild"

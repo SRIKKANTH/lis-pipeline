@@ -23,6 +23,7 @@ sudo cp -r %{SOURCE2} .
 %install
 cd ./tools/perf
 make DESTDIR=%{buildroot}%{_usr} install install-doc
+mv %{buildroot}%{_usr}/trace %{buildroot}%{_usr}/bin/trace
 mv %{buildroot}%{_usr}/etc %{buildroot}
 mkdir -p %{buildroot}%{_usr}/lib/
 pushd %{buildroot}
@@ -41,3 +42,4 @@ popd
 %{_bindir}/trace
 %{_usr}/share/*
 %{_usr}/lib64/libperf-jvmti.so
+%{_usr}/include/perf/perf_dlfilter.h
