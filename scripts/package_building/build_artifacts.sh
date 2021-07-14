@@ -924,7 +924,7 @@ function main {
     CREATE_CHANGELOG='True'
     ENABLE_DEBUG='False'
     # Note(v-advlad): Build only kernel and headers
-    LIGHT_BUILD='False'
+    LIGHT_BUILD='True'
 
     TEMP=$(getopt -o w:e:t:y:u:i:o:p:a:s:d:f:g:h:j:n:l:z:x:c:k:m:r: --long git_url:,git_branch:,archive_url:,local_path:,build_path:,debian_os_version:,artifacts_folder_prefix:,thread_number:,destination_path:,kernel_config:,default_branch:,git_tag:,clone_depth:,patch_file:,create_changelog:,build_date:,custom_build_tag:,use_ccache:,clean_env:,install_deps:,use_kernel_folder_prefix:,enable_kernel_debug:,light_build: -n 'build_artifacts.sh' -- "$@")
     if [[ $? -ne 0 ]]; then
