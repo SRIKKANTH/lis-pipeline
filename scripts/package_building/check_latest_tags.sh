@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -xe
-
+export GIT_SSL_NO_VERIFY=true
 function resolve_tree_state {
     repo_name="$1"
     kernel_tree="$2"
